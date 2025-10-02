@@ -1,0 +1,300 @@
+# 🚀 Website Builder AI - Cursor Rules
+
+## 🎯 Project Overview
+You are working on an AI-powered website builder targeting small local businesses in Germany. The goal is to create the simplest possible website creation experience with AI-first features.
+
+### Core Vision
+- **60-second promise**: Complete website creation in under 60 seconds
+- **Niche-first approach**: Start with restaurants/cafés, expand to other local businesses
+- **AI-powered simplicity**: Voice-to-website, photo-to-website, chat-based editing
+- **German market focus**: Local support, fair pricing (€9-39/month), German language
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **React/Next.js** for modern, fast websites
+- **Tailwind CSS** for rapid styling and responsive design
+- **TypeScript** for type safety and better development experience
+- **React DnD** or similar for drag-and-drop functionality
+- **Framer Motion** for smooth animations and transitions
+
+### Backend
+- **Node.js with Express** or **Python/Django** for API development
+- **PostgreSQL** for robust data storage
+- **Prisma** or **TypeORM** for database management
+- **JWT** for authentication
+
+### AI Integration
+- **OpenAI GPT-4** for chat-based editing and content generation
+- **Whisper API** for speech-to-text functionality
+- **DALL-E/Midjourney API** for image generation
+- **Google Speech API** as backup for voice features
+
+### Hosting & Deployment
+- **Vercel** or **Netlify** for automatic deployment
+- **AWS S3** or **Cloudflare** for asset hosting
+- **Stripe** for payment processing
+
+## 📋 Development Guidelines
+
+### Code Standards
+- **Always use TypeScript** - no JavaScript files unless absolutely necessary
+- **Follow React best practices** - functional components, hooks, proper state management
+- **Use Tailwind CSS** for all styling - avoid custom CSS unless absolutely necessary
+- **Implement proper error handling** - user-friendly error messages in German
+- **Write responsive code** - mobile-first approach is mandatory
+- **Use semantic HTML** - proper accessibility and SEO
+
+### AI Feature Development
+- **Voice features must be intuitive** - clear audio feedback, simple commands
+- **Photo processing should be instant** - show progress indicators
+- **Chat interface must be conversational** - natural German language responses
+- **Auto-branding should be smart** - analyze business type and apply appropriate styling
+- **Always provide fallback options** - if AI fails, manual editing should be available
+
+### User Experience Principles
+- **Simplicity over features** - every feature must pass the "does my grandmother understand this?" test
+- **Speed is critical** - loading times under 2 seconds, instant feedback
+- **German language first** - all UI text, error messages, and AI responses in German
+- **Mobile-optimized** - most users will create websites on their phones
+- **Progressive enhancement** - works without JavaScript, enhanced with it
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: Professional blue (#2563eb)
+- **Secondary**: Success green (#10b981) 
+- **Accent**: Warning orange (#f59e0b)
+- **Neutral**: Clean grays (#6b7280, #9ca3af, #d1d5db)
+
+### Typography
+- **Headings**: Inter or Poppins (bold, clean)
+- **Body**: System fonts (Inter, -apple-system, BlinkMacSystemFont)
+- **Monospace**: JetBrains Mono for code
+
+### Component Guidelines
+- **Buttons**: Rounded corners (8px), clear hierarchy (primary/secondary/ghost)
+- **Cards**: Subtle shadows, rounded corners (12px)
+- **Forms**: Clear labels, helpful placeholder text, immediate validation
+- **Navigation**: Simple, always visible on mobile
+
+## 🏗️ Architecture Patterns
+
+### Component Structure
+```
+src/
+├── components/
+│   ├── ui/           # Reusable UI components
+│   ├── builder/      # Website builder specific components
+│   ├── ai/          # AI-powered components
+│   └── templates/   # Website templates
+├── pages/
+│   ├── builder/     # Builder interface
+│   ├── templates/   # Template gallery
+│   └── dashboard/   # User dashboard
+├── hooks/           # Custom React hooks
+├── utils/           # Helper functions
+├── types/           # TypeScript type definitions
+└── services/        # API calls and external services
+```
+
+### State Management
+- **React Context** for global state (user, current website)
+- **useReducer** for complex state logic
+- **React Query** for server state management
+- **Zustand** for simple global state if needed
+
+### API Design
+- **RESTful endpoints** with clear naming conventions
+- **GraphQL** for complex queries if needed
+- **Rate limiting** for AI endpoints
+- **Proper error codes** and German error messages
+
+## 🎯 Feature Development Priorities
+
+### Phase 1 (MVP) - Months 1-2
+1. **Basic drag-and-drop builder**
+2. **Restaurant templates** (5 high-quality templates)
+3. **Image upload and management**
+4. **Text editing with AI suggestions**
+5. **Domain connection**
+6. **Basic payment system**
+
+### Phase 2 (AI Features) - Month 3
+1. **Chat-based editing** ("Mach den Button größer")
+2. **Auto-branding** (logo generation, color schemes)
+3. **Social media import** (Instagram/Facebook integration)
+4. **Voice-to-text** for content creation
+
+### Phase 3 (Premium Features) - Month 5
+1. **Booking system** for restaurants
+2. **Online shop module** (up to 50 products)
+3. **Analytics dashboard**
+4. **Multi-language support**
+
+## 🚨 Critical Success Factors
+
+### Performance Requirements
+- **Page load time**: < 2 seconds
+- **Builder responsiveness**: < 100ms for all interactions
+- **AI response time**: < 3 seconds for all AI features
+- **Mobile performance**: 90+ Lighthouse score
+
+### Accessibility Standards
+- **WCAG 2.1 AA compliance** - built-in accessibility
+- **Keyboard navigation** - full keyboard support
+- **Screen reader support** - proper ARIA labels
+- **High contrast mode** - support for visual impairments
+
+### Security Requirements
+- **HTTPS everywhere** - no exceptions
+- **Input sanitization** - prevent XSS attacks
+- **Rate limiting** - protect against abuse
+- **Data encryption** - sensitive data encrypted at rest
+- **GDPR compliance** - proper data handling for German market
+
+## 🧪 Testing Strategy
+
+### Testing Requirements
+- **Unit tests** for all utility functions and hooks
+- **Integration tests** for API endpoints
+- **E2E tests** for critical user flows
+- **Visual regression tests** for UI components
+- **Performance tests** for AI endpoints
+
+### Test Coverage Goals
+- **Minimum 80% code coverage** for business logic
+- **100% coverage** for payment and authentication flows
+- **Regular testing** of AI features with edge cases
+
+## 📝 Code Review Guidelines
+
+### Before Submitting
+- **All TypeScript errors resolved**
+- **No console.log statements** in production code
+- **Proper error handling** implemented
+- **Responsive design** tested on mobile
+- **German translations** added for new UI text
+- **Performance impact** considered for new features
+
+### Review Checklist
+- **Code follows established patterns**
+- **No hardcoded strings** (use i18n)
+- **Proper TypeScript types** defined
+- **Accessibility considerations** addressed
+- **Mobile-first approach** maintained
+- **AI features have fallbacks**
+
+## 🎨 Template Development
+
+### Restaurant Template Requirements
+- **Menu display** with categories and prices
+- **Reservation system** integration ready
+- **Photo gallery** for food images
+- **Contact information** prominently displayed
+- **Opening hours** clearly visible
+- **QR code** for contactless menu access
+
+### Design Principles for Templates
+- **Clean and professional** appearance
+- **Fast loading** with optimized images
+- **Mobile-first** responsive design
+- **German business culture** appropriate styling
+- **Easy customization** with AI assistance
+
+## 💡 AI Development Guidelines
+
+### Voice Features
+- **Clear audio feedback** for all voice commands
+- **German language optimization** for speech recognition
+- **Fallback to typing** if voice fails
+- **Progress indicators** for voice processing
+
+### Chat Interface
+- **Natural German conversation** style
+- **Context awareness** - remember previous commands
+- **Undo/redo functionality** for AI changes
+- **Confirmation prompts** for destructive actions
+
+### Auto-Branding
+- **Business type detection** from content and images
+- **Color psychology** appropriate for business type
+- **Professional logo generation** or placeholder suggestions
+- **Consistent brand application** across all elements
+
+## 🚀 Deployment & DevOps
+
+### Environment Setup
+- **Development**: Local development with hot reload
+- **Staging**: Production-like environment for testing
+- **Production**: Optimized builds with monitoring
+
+### CI/CD Pipeline
+- **Automatic testing** on pull requests
+- **Code quality checks** (ESLint, Prettier, TypeScript)
+- **Performance budgets** enforced
+- **Automatic deployment** to staging
+- **Manual approval** for production releases
+
+### Monitoring & Analytics
+- **Error tracking** with Sentry or similar
+- **Performance monitoring** with Core Web Vitals
+- **User analytics** (privacy-compliant)
+- **AI feature usage** tracking
+- **Business metrics** (conversion rates, churn)
+
+## 🎯 Success Metrics
+
+### Technical KPIs
+- **Page load time**: < 2 seconds
+- **Builder performance**: < 100ms response time
+- **Uptime**: > 99.9%
+- **Error rate**: < 0.1%
+
+### Business KPIs
+- **Time to website creation**: < 60 seconds
+- **User satisfaction**: > 4.5/5 stars
+- **Conversion rate**: > 15% free to paid
+- **Churn rate**: < 5% monthly
+
+## 🚨 Common Pitfalls to Avoid
+
+### Technical Pitfalls
+- **Over-engineering** - keep it simple
+- **Ignoring mobile performance** - test on real devices
+- **Poor error handling** - always provide user-friendly messages
+- **Inconsistent state management** - use established patterns
+- **Slow AI responses** - implement proper loading states
+
+### Business Pitfalls
+- **Feature creep** - focus on core value proposition
+- **Complex pricing** - keep tiers simple and clear
+- **Poor onboarding** - guide users through first website creation
+- **Ignoring feedback** - regularly talk to customers
+- **Scaling too fast** - ensure quality before growth
+
+## 💬 Communication Guidelines
+
+### Code Comments
+- **Write comments in English** for technical documentation
+- **User-facing text in German** with proper i18n
+- **Explain complex AI logic** thoroughly
+- **Document API endpoints** with examples
+- **Include TODO comments** for future improvements
+
+### Git Commit Messages
+- **Use conventional commits**: feat:, fix:, docs:, style:, refactor:
+- **Write in English** for technical commits
+- **Include ticket numbers** if using issue tracking
+- **Keep messages concise** but descriptive
+
+## 🎯 Remember: Simplicity Wins
+
+Every decision should be evaluated against these questions:
+1. **Does this make the user experience simpler?**
+2. **Would my grandmother understand this?**
+3. **Does this help create a website in under 60 seconds?**
+4. **Is this necessary for the MVP or can it wait?**
+5. **Does this align with our German market focus?**
+
+**Build for speed, simplicity, and the German small business owner who just wants to get online quickly and professionally.**
